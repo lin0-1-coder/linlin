@@ -1,0 +1,2178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>读书日 · 一封折进书页里的邀请</title>
+<meta name="description" content="成都艺术职业大学图书馆读书日邀请函：2026年11月17日15:00，图书馆二楼阅览厅。">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@300;400;600;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;display=swap">
+<link rel="icon" href="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23EDE6D5'/%3E%3Cpath d='M6 7h9v18H6z' fill='%2316201B'/%3E%3Cpath d='M17 7h9v18h-9z' fill='%23A83A2C'/%3E%3C/svg%3E">
+<style>
+/* ===== 令牌 ===== */
+:root{
+  --ink:#16201B;
+  --ink-soft:#2F3D34;
+  --paper:#EDE6D5;
+  --paper-2:#E2D7BE;
+  --paper-3:#F5F0E3;
+  --verm:#A83A2C;
+  --pine:#3A5A4B;
+  --ash:#6E6557;
+  --line:rgba(22,32,27,.16);
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;
+  --latin:"EB Garamond",Georgia,"Times New Roman",serif;
+  --grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='220' height='220' filter='n' opacity='0.15'/></svg>");
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:#0c110f;
+  color:var(--ink);
+  font-family:var(--serif);
+  font-weight:400;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:0;
+  background:
+    radial-gradient(115% 85% at 16% 6%, rgba(58,90,75,.26), rgba(58,90,75,0) 62%),
+    radial-gradient(85% 70% at 82% 98%, rgba(168,58,44,.12), rgba(168,58,44,0) 66%),
+    linear-gradient(160deg,#101815,#080b0a 78%);
+}
+::selection{background:rgba(168,58,44,.22);color:var(--ink)}
+
+/* ===== 舞台 ===== */
+.stage{
+  position:fixed;
+  inset:0;
+  z-index:1;
+  display:grid;
+  place-items:center;
+  padding:clamp(10px,2.6vh,38px) clamp(10px,2vw,26px);
+}
+.book{
+  position:relative;
+  display:grid;
+  grid-template-columns:76px minmax(0,1fr);
+  width:min(1180px,100%);
+  height:min(770px,calc(100vh - 92px));
+  background:var(--paper);
+  border-radius:3px;
+  overflow:hidden;
+  box-shadow:
+    0 40px 80px -30px rgba(0,0,0,.9),
+    0 6px 18px rgba(0,0,0,.4),
+    0 0 0 1px rgba(0,0,0,.42);
+}
+
+/* ===== 书脊 / 页签 ===== */
+.spine{
+  position:relative;
+  z-index:3;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding:18px 0 16px;
+  background:
+    linear-gradient(90deg,#0d1311,#1b2620 62%,#131b17),
+    var(--ink);
+  color:#c9bfa8;
+}
+.spine::after{
+  content:"";
+  position:absolute;
+  top:0;right:0;bottom:0;
+  width:7px;
+  background:linear-gradient(90deg,rgba(0,0,0,.55),rgba(0,0,0,0));
+  pointer-events:none;
+}
+.spine-mark{
+  writing-mode:vertical-rl;
+  font-size:12.5px;
+  letter-spacing:.36em;
+  line-height:1;
+  color:#bdb29a;
+  padding-top:4px;
+}
+.spine-mark b{font-weight:600;color:#e6dcc4;letter-spacing:.3em}
+.tabs{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:2px;
+  margin-top:auto;
+}
+.tab{
+  appearance:none;
+  border:0;
+  background:transparent;
+  font-family:var(--latin);
+  font-size:11.5px;
+  letter-spacing:.06em;
+  color:#6f6a5c;
+  width:38px;
+  min-height:26px;
+  cursor:pointer;
+  border-radius:2px;
+  transition:color .18s ease,background .18s ease;
+}
+.tab:hover{color:#ddd3bb;background:rgba(255,255,255,.05)}
+.tab.is-cur{color:#f2e8d0}
+.tab.is-cur::after{
+  content:"";
+  display:block;
+  width:14px;height:1px;
+  margin:1px auto 0;
+  background:var(--verm);
+}
+
+/* ===== 页面 ===== */
+.pages{
+  position:relative;
+  z-index:1;
+  perspective:2400px;
+  perspective-origin:8% 50%;
+  background:var(--paper-2);
+  overflow:hidden;
+}
+.pages::after{
+  content:"";
+  position:absolute;
+  top:0;right:0;bottom:0;
+  width:7px;
+  z-index:5;
+  pointer-events:none;
+  background:repeating-linear-gradient(to right,rgba(255,255,255,0) 0 1px,rgba(22,32,27,.1) 1px 2px);
+  opacity:.65;
+}
+.leaf{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background-color:var(--paper);
+  background-image:var(--grain);
+  background-size:220px 220px;
+  background-blend-mode:multiply;
+  transform-origin:left center;
+  transform-style:preserve-3d;
+  backface-visibility:hidden;
+  will-change:transform;
+  transition:transform .88s cubic-bezier(.22,.86,.24,1),opacity .46s ease;
+  box-shadow:inset 26px 0 34px -30px rgba(22,32,27,.55);
+}
+.leaf.is-on{visibility:visible;opacity:1;transform:rotateY(0deg);pointer-events:auto}
+.leaf.is-turn-next{visibility:visible;transform:rotateY(-114deg);opacity:.1;pointer-events:none}
+.leaf.is-turn-prev{visibility:visible;transform:rotateY(114deg);opacity:.1;pointer-events:none}
+.leaf.is-pre{visibility:visible;transform:rotateY(13deg);opacity:.45;pointer-events:none;transition:none}
+.leaf.is-off{visibility:hidden;opacity:0;transform:none;pointer-events:none;transition:none}
+.leaf::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(12,20,16,.46),rgba(12,20,16,.14) 24%,rgba(12,20,16,0) 50%);
+  opacity:0;
+  transition:opacity .6s ease;
+}
+.leaf.is-shade::after{opacity:1}
+
+.page{
+  height:100%;
+  display:grid;
+  grid-template-rows:auto minmax(0,1fr);
+  padding:clamp(20px,3.2vh,34px) clamp(18px,3.6vw,54px) 84px;
+}
+.page-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:16px;
+  font-size:11.5px;
+  letter-spacing:.16em;
+  color:var(--ash);
+  padding-bottom:9px;
+  border-bottom:1px solid var(--line);
+}
+.page-head .ph-r{text-align:right;flex:0 0 auto}
+.page-body{
+  min-height:0;
+  padding-top:clamp(14px,2.6vh,30px);
+  overflow-y:auto;
+  overflow-x:hidden;
+  scrollbar-width:thin;
+  scrollbar-color:rgba(22,32,27,.2) transparent;
+}
+.page-body::-webkit-scrollbar{width:6px}
+.page-body::-webkit-scrollbar-thumb{background:rgba(22,32,27,.18);border-radius:3px}
+
+/* ===== 底栏 ===== */
+.nav{
+  position:absolute;
+  left:0;right:0;bottom:0;
+  z-index:8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(10px,2.6vw,26px);
+  padding:12px clamp(12px,3vw,26px) 16px;
+  background:linear-gradient(to top,var(--paper) 58%,rgba(237,230,213,.9) 82%,rgba(237,230,213,0));
+}
+.navbtn{
+  appearance:none;
+  border:0;
+  background:transparent;
+  font-family:var(--serif);
+  font-size:12.5px;
+  letter-spacing:.1em;
+  color:var(--ink);
+  min-height:44px;
+  padding:6px 4px;
+  cursor:pointer;
+  position:relative;
+}
+.navbtn::after{
+  content:"";
+  position:absolute;
+  left:0;right:100%;bottom:12px;
+  height:1px;
+  background:var(--verm);
+  transition:right .26s cubic-bezier(.22,.86,.24,1);
+}
+.navbtn:hover::after,.navbtn:focus-visible::after{right:0}
+.navbtn[disabled]{color:var(--ash);opacity:.42;cursor:default}
+.navbtn[disabled]::after{display:none}
+.pageno{
+  display:flex;
+  align-items:baseline;
+  gap:5px;
+  font-family:var(--latin);
+  font-size:15px;
+  color:var(--pine);
+  font-variant-numeric:lining-nums;
+  padding:0 6px;
+}
+.pageno em{font-style:normal;font-size:11px;color:var(--ash);letter-spacing:.08em}
+
+/* ===== 折角 ===== */
+.dogear{
+  position:absolute;
+  top:0;right:7px;
+  z-index:9;
+  width:58px;height:58px;
+  padding:0;border:0;
+  background:transparent;
+  cursor:pointer;
+  transition:transform .3s cubic-bezier(.22,.86,.24,1);
+}
+.dogear:hover{transform:translateY(2px)}
+.dogear svg{width:100%;height:100%;display:block}
+.dogear .fold{fill:#DFD3B8}
+.dogear .crease{stroke:rgba(22,32,27,.28);stroke-width:1}
+
+/* ===== 通用文字 ===== */
+.h1{
+  font-size:clamp(26px,4.2vh,44px);
+  line-height:1.24;
+  font-weight:900;
+  letter-spacing:.03em;
+  margin:0 0 .5em;
+  text-wrap:balance;
+}
+.lead{
+  font-size:clamp(15px,1.9vh,18px);
+  line-height:2.05;
+  color:var(--ink-soft);
+  max-width:38em;
+  margin:0;
+}
+.body-t{
+  font-size:clamp(14.5px,1.75vh,16.5px);
+  line-height:1.98;
+  color:var(--ink-soft);
+  margin:0;
+  max-width:40em;
+}
+.rule-dot{
+  display:block;
+  width:100%;
+  height:1px;
+  background:var(--line);
+  margin:clamp(12px,2vh,22px) 0;
+}
+
+/* ===== 01 封面 ===== */
+.cover{
+  display:grid;
+  grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+  gap:clamp(16px,3.2vw,44px);
+  height:100%;
+  align-items:stretch;
+}
+.cover-text{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:clamp(10px,1.8vh,20px);
+  min-width:0;
+}
+.cover-title{
+  margin:0;
+  font-size:clamp(48px,10.4vh,104px);
+  line-height:.98;
+  font-weight:900;
+  letter-spacing:.16em;
+  color:var(--ink);
+}
+.cover-sub{
+  margin:0;
+  font-size:clamp(15px,2.2vh,20px);
+  letter-spacing:.14em;
+  color:var(--ink-soft);
+}
+.cover-hair{
+  width:min(120px,40%);
+  height:1px;
+  background:var(--ink);
+  opacity:.6;
+  margin:clamp(4px,1vh,10px) 0;
+}
+.cover-meta{
+  display:grid;
+  gap:9px;
+  margin:0;
+}
+.cover-meta div{
+  display:grid;
+  grid-template-columns:4.6em minmax(0,1fr);
+  align-items:baseline;
+  gap:10px;
+}
+.cover-meta dt{
+  font-size:11.5px;
+  letter-spacing:.18em;
+  color:var(--ash);
+}
+.cover-meta dd{
+  margin:0;
+  font-size:clamp(14px,1.7vh,15.5px);
+  color:var(--ink);
+  letter-spacing:.04em;
+}
+.btn-line{
+  align-self:flex-start;
+  appearance:none;
+  margin-top:clamp(6px,1.4vh,14px);
+  padding:12px 22px 12px 20px;
+  min-height:44px;
+  background:transparent;
+  border:1px solid rgba(22,32,27,.55);
+  border-radius:0;
+  font-family:var(--serif);
+  font-size:14px;
+  letter-spacing:.16em;
+  color:var(--ink);
+  cursor:pointer;
+  transition:background .24s ease,color .24s ease,border-color .24s ease;
+}
+.btn-line:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.cover-plate{
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-width:0;
+  position:relative;
+}
+.plate-frame{
+  border:1px solid rgba(22,32,27,.3);
+  padding:7px;
+  background:rgba(245,240,227,.5);
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.plate-frame img{
+  display:block;
+  width:100%;
+  flex:1 1 auto;
+  min-height:0;
+  object-fit:cover;
+  object-position:center 58%;
+  filter:saturate(.92) contrast(1.02);
+}
+.plate-cap{
+  flex:0 0 auto;
+  margin:0;
+  font-size:11px;
+  letter-spacing:.12em;
+  color:var(--ash);
+  padding:2px 2px 0;
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+}
+.seal{
+  position:absolute;
+  right:-6px;
+  bottom:-10px;
+  width:clamp(64px,9vh,84px);
+  transform:rotate(-7deg);
+  opacity:.9;
+  mix-blend-mode:multiply;
+}
+.seal svg{width:100%;height:auto;display:block}
+
+/* ===== 02 序 ===== */
+.preface{
+  display:grid;
+  grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);
+  gap:clamp(18px,3.6vw,52px);
+  height:100%;
+  align-items:stretch;
+}
+.preface-col{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  min-height:0;
+}
+.vtext{
+  writing-mode:vertical-rl;
+  flex:1 1 auto;
+  min-height:0;
+  margin:0;
+  font-size:clamp(14px,1.72vh,15.5px);
+  line-height:2.1;
+  letter-spacing:.05em;
+  color:var(--ink-soft);
+  overflow:hidden;
+}
+.vtext p{margin:0 0 0 1.4em;text-indent:0}
+.sig{
+  margin-top:auto;
+  padding-top:14px;
+  display:flex;
+  align-items:flex-end;
+  gap:14px;
+}
+.sig-name{
+  font-size:clamp(16px,2.1vh,19px);
+  letter-spacing:.22em;
+  color:var(--ink);
+}
+.sig-date{
+  font-family:var(--latin);
+  font-size:12.5px;
+  letter-spacing:.1em;
+  color:var(--ash);
+  padding-bottom:2px;
+}
+.preface-plate{
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  min-width:0;
+  min-height:0;
+}
+.preface-plate .plate-frame{flex:1 1 auto;min-height:0}
+
+/* ===== 03 把书读旧 ===== */
+.aging{
+  display:flex;
+  flex-direction:column;
+  gap:clamp(12px,2.2vh,22px);
+  height:100%;
+}
+.pacts{
+  display:grid;
+  gap:0;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.pacts li{
+  display:grid;
+  grid-template-columns:5.6em minmax(0,1fr);
+  gap:clamp(10px,2vw,24px);
+  align-items:baseline;
+  padding:clamp(8px,1.4vh,13px) 0;
+  border-bottom:1px solid var(--line);
+}
+.pacts li:first-child{border-top:1px solid var(--line)}
+.pacts b{
+  font-weight:600;
+  font-size:clamp(16px,2.1vh,20px);
+  letter-spacing:.14em;
+  color:var(--verm);
+}
+.pacts span{font-size:clamp(14px,1.72vh,16px);line-height:1.85;color:var(--ink-soft)}
+.banner{
+  margin:auto 0 0;
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  min-height:0;
+}
+.banner .plate-frame{
+  padding:6px;
+  height:clamp(126px,21vh,196px);
+}
+.banner .plate-frame img{object-position:center 46%}
+
+/* ===== 04 时间地点 ===== */
+.place{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:clamp(18px,3.4vw,48px);
+  height:100%;
+  align-items:start;
+}
+.card-list{
+  margin:0;
+  display:grid;
+  gap:0;
+}
+.card-list div{
+  display:grid;
+  grid-template-columns:5.2em minmax(0,1fr);
+  gap:clamp(10px,2vw,20px);
+  align-items:baseline;
+  padding:clamp(9px,1.5vh,14px) 0;
+  border-bottom:1px solid var(--line);
+}
+.card-list div:first-child{border-top:1px solid var(--line)}
+.card-list dt{
+  font-size:11.5px;
+  letter-spacing:.2em;
+  color:var(--ash);
+}
+.card-list dd{
+  margin:0;
+  font-size:clamp(14.5px,1.8vh,16.5px);
+  line-height:1.7;
+  color:var(--ink);
+}
+.card-list dd strong{
+  font-weight:600;
+  color:var(--verm);
+  font-size:.92em;
+  margin-left:.4em;
+  letter-spacing:.06em;
+}
+.card-list dd small{display:block;font-size:12.5px;color:var(--ash);letter-spacing:.04em;margin-top:3px}
+.route{
+  background:rgba(226,215,190,.42);
+  border:1px solid rgba(22,32,27,.14);
+  padding:clamp(12px,2vh,18px) clamp(12px,2vw,18px) clamp(14px,2.2vh,18px);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.route-h{
+  font-size:11.5px;
+  letter-spacing:.2em;
+  color:var(--ash);
+  margin:0;
+}
+.route svg{width:100%;height:auto;display:block}
+.route-p{
+  margin:0;
+  font-size:clamp(13px,1.6vh,14.5px);
+  line-height:1.95;
+  color:var(--ink-soft);
+}
+.route-p em{font-style:normal;color:var(--verm)}
+.note-line{
+  margin:clamp(10px,1.8vh,16px) 0 0;
+  font-size:13px;
+  line-height:1.9;
+  color:var(--ash);
+}
+.place-side{display:flex;flex-direction:column;gap:clamp(12px,2vh,18px);min-width:0;height:100%}
+
+/* ===== 05 流程 ===== */
+.tl{display:grid;margin:0}
+.tl-row{
+  display:grid;
+  grid-template-columns:4.4rem 1.5rem minmax(0,1fr);
+  padding-bottom:clamp(11px,2.9vh,26px);
+}
+.tl-row:last-child{padding-bottom:0}
+.tl-t{
+  font-family:var(--latin);
+  font-size:clamp(14px,1.8vh,16.5px);
+  color:var(--pine);
+  text-align:right;
+  padding-right:.65rem;
+  padding-top:1px;
+  font-variant-numeric:lining-nums;
+  letter-spacing:.02em;
+}
+.tl-axis{position:relative}
+.tl-axis::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;bottom:0;
+  width:1px;
+  transform:translateX(-.5px);
+  background:rgba(22,32,27,.18);
+}
+.tl-row:first-child .tl-axis::before{top:10.9px}
+.tl-row:last-child .tl-axis::before{bottom:calc(100% - 10.9px)}
+.tl-dot{
+  position:absolute;
+  left:50%;
+  top:6.4px;
+  width:9px;height:9px;
+  margin-left:-4.5px;
+  border-radius:50%;
+  background:var(--verm);
+}
+.tl-row:first-child .tl-dot{width:11px;height:11px;margin-left:-5.5px;top:5.4px}
+.tl-body{padding-left:.35rem;min-width:0}
+.tl-h{
+  margin:0;
+  font-size:clamp(15px,1.9vh,17.5px);
+  font-weight:600;
+  letter-spacing:.1em;
+  line-height:1.35;
+}
+.tl-p{
+  margin:3px 0 0;
+  font-size:clamp(13px,1.62vh,14.5px);
+  line-height:1.75;
+  color:var(--ash);
+}
+.tl-p .em{color:var(--ink-soft)}
+
+/* ===== 06 书单 ===== */
+.books{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:clamp(16px,3vw,38px);
+  row-gap:0;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.bk{
+  appearance:none;
+  border:0;
+  border-top:1px solid var(--line);
+  background:transparent;
+  text-align:left;
+  font-family:inherit;
+  color:inherit;
+  padding:clamp(11px,2.2vh,18px) 0;
+  cursor:pointer;
+  width:100%;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 18px;
+  column-gap:8px;
+  align-items:start;
+  transition:background .2s ease;
+}
+.bk:hover{background:rgba(58,90,75,.05)}
+.bk-title{
+  font-size:clamp(15px,1.9vh,18px);
+  font-weight:600;
+  letter-spacing:.03em;
+  margin:0;
+  line-height:1.5;
+}
+.bk-by{
+  font-size:12px;
+  letter-spacing:.1em;
+  color:var(--ash);
+  margin:4px 0 0;
+}
+.bk-hook{
+  font-size:clamp(13px,1.6vh,14px);
+  line-height:1.7;
+  color:var(--ink-soft);
+  margin:6px 0 0;
+}
+.bk-more{
+  grid-column:1 / -1;
+  display:grid;
+  grid-template-rows:0fr;
+  transition:grid-template-rows .34s cubic-bezier(.22,.86,.24,1);
+}
+.bk-more > span{
+  overflow:hidden;
+  min-height:0;
+  display:block;
+}
+.bk-quote{
+  display:block;
+  margin:8px 0 2px;
+  font-size:clamp(13px,1.6vh,14px);
+  line-height:1.8;
+  color:var(--pine);
+  border-left:2px solid rgba(168,58,44,.5);
+  padding-left:10px;
+}
+.bk.is-open .bk-more{grid-template-rows:1fr}
+.bk-plus{
+  font-family:var(--latin);
+  font-size:15px;
+  line-height:1.5;
+  color:var(--ash);
+  text-align:center;
+  transition:transform .28s cubic-bezier(.22,.86,.24,1),color .2s;
+}
+.bk.is-open .bk-plus{transform:rotate(45deg);color:var(--verm)}
+
+/* ===== 07 抽一页 ===== */
+.draw{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  height:100%;
+  gap:clamp(10px,2vh,20px);
+}
+.draw-head{max-width:34em}
+.draw-head .h1{margin-bottom:.35em}
+.draw-slot{
+  flex:1 1 auto;
+  display:grid;
+  place-items:center;
+  width:100%;
+  min-height:0;
+  perspective:900px;
+}
+.slip{
+  width:min(100%,430px);
+  min-height:clamp(150px,26vh,220px);
+  padding:clamp(16px,3vh,30px) clamp(18px,4vw,32px);
+  background:var(--paper-3);
+  background-image:var(--grain);
+  background-size:200px 200px;
+  background-blend-mode:multiply;
+  border:1px solid rgba(22,32,27,.16);
+  box-shadow:0 12px 26px -18px rgba(22,32,27,.5),0 1px 0 rgba(255,255,255,.5) inset;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:12px;
+  transform-origin:left center;
+  transition:transform .5s cubic-bezier(.22,.86,.24,1),opacity .3s ease;
+}
+.slip.is-flip{transform:rotateY(-72deg);opacity:.35}
+.slip-no{
+  font-family:var(--latin);
+  font-size:12px;
+  letter-spacing:.18em;
+  color:var(--ash);
+  text-align:left;
+}
+.slip-text{
+  font-size:clamp(17px,2.5vh,23px);
+  line-height:1.85;
+  letter-spacing:.05em;
+  color:var(--ink);
+  margin:0;
+  text-align:left;
+  font-weight:600;
+}
+.slip-idle{
+  font-size:13.5px;
+  line-height:1.9;
+  color:var(--ash);
+  text-align:left;
+  margin:0;
+}
+.draw-foot{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+}
+.draw-foot .btn-line{align-self:center}
+.draw-note{
+  font-size:12.5px;
+  letter-spacing:.08em;
+  color:var(--ash);
+  margin:0;
+}
+
+/* ===== 08 留言 ===== */
+.wall{
+  display:flex;
+  flex-direction:column;
+  gap:clamp(12px,2vh,20px);
+  height:100%;
+}
+.wform{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:10px;
+  align-items:stretch;
+}
+.winput{
+  appearance:none;
+  border:1px solid rgba(22,32,27,.3);
+  border-radius:0;
+  background:rgba(245,240,227,.65);
+  font-family:var(--serif);
+  font-size:16px;
+  letter-spacing:.03em;
+  color:var(--ink);
+  padding:11px 14px;
+  min-height:46px;
+  width:100%;
+  min-width:0;
+}
+.winput::placeholder{color:rgba(110,101,87,.75);font-size:14px}
+.winput:focus{outline:none;border-color:var(--pine);background:rgba(245,240,227,.92)}
+.wbtn{
+  appearance:none;
+  border:1px solid var(--ink);
+  background:var(--ink);
+  color:var(--paper);
+  font-family:var(--serif);
+  font-size:13.5px;
+  letter-spacing:.14em;
+  padding:0 20px;
+  min-height:46px;
+  cursor:pointer;
+  transition:background .2s ease,color .2s ease;
+}
+.wbtn:hover{background:var(--verm);border-color:var(--verm)}
+.wnotes{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(10px,2vw,18px);
+  align-content:start;
+  padding:6px 4px 4px;
+  overflow-y:auto;
+  min-height:0;
+  flex:1 1 auto;
+  scrollbar-width:thin;
+}
+.wnotes::-webkit-scrollbar{width:6px}
+.wnotes::-webkit-scrollbar-thumb{background:rgba(22,32,27,.16);border-radius:3px}
+.note{
+  background:var(--paper-3);
+  background-image:var(--grain);
+  background-size:180px 180px;
+  background-blend-mode:multiply;
+  border:1px solid rgba(22,32,27,.12);
+  box-shadow:0 8px 18px -14px rgba(22,32,27,.7);
+  padding:16px 14px 12px;
+  font-size:clamp(13.5px,1.66vh,15px);
+  line-height:1.8;
+  color:var(--ink);
+  position:relative;
+  min-height:96px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:8px;
+  animation:noteIn .42s cubic-bezier(.22,.86,.24,1) both;
+}
+@keyframes noteIn{from{opacity:0;transform:translateY(-8px) scale(.96)}to{opacity:1}}
+.note-t{display:block;margin:0}
+.note-by{
+  font-size:11px;
+  letter-spacing:.12em;
+  color:var(--ash);
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+}
+.note-new{color:var(--verm)}
+.wcount{
+  font-family:var(--latin);
+  font-size:12px;
+  letter-spacing:.1em;
+  color:var(--ash);
+  margin:0;
+  text-align:right;
+}
+
+/* ===== 09 回执 ===== */
+.rsvp{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,.94fr);
+  gap:clamp(18px,3.4vw,46px);
+  height:100%;
+  align-items:start;
+}
+.rsvp-form{display:flex;flex-direction:column;gap:clamp(10px,1.8vh,16px);min-width:0}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:11.5px;letter-spacing:.18em;color:var(--ash)}
+.field input{
+  appearance:none;
+  border:1px solid rgba(22,32,27,.3);
+  background:rgba(245,240,227,.65);
+  border-radius:0;
+  font-family:var(--serif);
+  font-size:16px;
+  letter-spacing:.06em;
+  color:var(--ink);
+  padding:11px 14px;
+  min-height:46px;
+}
+.field input:focus{outline:none;border-color:var(--pine);background:rgba(245,240,227,.9)}
+.field input::placeholder{color:rgba(110,101,87,.7)}
+.ticket{
+  background:var(--paper-3);
+  background-image:var(--grain);
+  background-size:200px 200px;
+  background-blend-mode:multiply;
+  border:1px solid rgba(22,32,27,.22);
+  box-shadow:0 14px 30px -22px rgba(22,32,27,.7);
+  padding:clamp(14px,2.4vh,22px) clamp(14px,2.4vw,22px) clamp(12px,2vh,16px);
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  min-height:clamp(220px,38vh,300px);
+}
+.ticket-h{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:10px;
+  border-bottom:1px solid var(--line);
+  padding-bottom:8px;
+  font-size:11.5px;
+  letter-spacing:.18em;
+  color:var(--ash);
+}
+.ticket-h b{font-weight:600;color:var(--ink);letter-spacing:.14em}
+.ticket-rows{display:grid;gap:7px;margin:0}
+.ticket-rows div{
+  display:grid;
+  grid-template-columns:4em minmax(0,1fr);
+  gap:8px;
+  align-items:baseline;
+}
+.ticket-rows dt{font-size:11px;letter-spacing:.16em;color:var(--ash)}
+.ticket-rows dd{
+  margin:0;
+  font-size:clamp(13.5px,1.7vh,15px);
+  color:var(--ink);
+  letter-spacing:.04em;
+  border-bottom:1px dashed rgba(22,32,27,.18);
+  padding-bottom:3px;
+  min-height:1.6em;
+}
+.ticket-rows dd.is-empty{color:var(--ash)}
+.ticket-code{
+  margin-top:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:12px;
+  padding-top:10px;
+  border-top:1px solid var(--line);
+}
+.barcode{
+  width:clamp(80px,16vw,120px);
+  height:26px;
+  background:repeating-linear-gradient(90deg,rgba(22,32,27,.85) 0 2px,rgba(22,32,27,0) 2px 4px,rgba(22,32,27,.75) 4px 5px,rgba(22,32,27,0) 5px 9px,rgba(22,32,27,.9) 9px 12px,rgba(22,32,27,0) 12px 14px);
+  opacity:.8;
+}
+.ticket-no{
+  font-family:var(--latin);
+  font-size:13px;
+  letter-spacing:.14em;
+  color:var(--ash);
+  white-space:nowrap;
+}
+.ticket-seal{
+  position:absolute;
+  right:clamp(8px,2vw,16px);
+  bottom:clamp(34px,5vh,46px);
+  width:clamp(56px,8.4vh,76px);
+  transform:rotate(-8deg);
+  opacity:.85;
+  mix-blend-mode:multiply;
+  pointer-events:none;
+  transition:opacity .3s ease;
+}
+.ticket-seal svg{width:100%;height:auto;display:block}
+.ticket-seal.is-ghost{opacity:.18}
+.ticket-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.mini-btn{
+  appearance:none;
+  border:1px solid rgba(22,32,27,.4);
+  background:transparent;
+  font-family:var(--serif);
+  font-size:12.5px;
+  letter-spacing:.12em;
+  color:var(--ink);
+  padding:9px 14px;
+  min-height:40px;
+  cursor:pointer;
+  transition:background .2s,color .2s,border-color .2s;
+}
+.mini-btn:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.mini-btn[disabled]{opacity:.4;cursor:default}
+.farewell{
+  margin-top:auto;
+  padding-top:clamp(10px,2vh,18px);
+  border-top:1px solid var(--line);
+  font-size:12.5px;
+  line-height:1.95;
+  color:var(--ash);
+  letter-spacing:.04em;
+}
+.farewell span{color:var(--ink);letter-spacing:.14em}
+
+/* ===== 开信 · 信封 ===== */
+.gate{
+  position:fixed;
+  inset:0;
+  z-index:22;
+  display:grid;
+  place-items:center;
+  background:
+    radial-gradient(110% 80% at 50% 44%, rgba(58,90,75,.2), rgba(0,0,0,0) 64%),
+    linear-gradient(160deg,#101815,#060807 78%);
+  transition:opacity .8s ease;
+  cursor:pointer;
+}
+.gate.is-out{opacity:0;pointer-events:none}
+.gate.is-gone{display:none}
+.gate-inner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:clamp(16px,3.2vh,32px);
+  padding:16px;
+}
+.env{
+  position:relative;
+  width:min(520px,84vw,76vh);
+  aspect-ratio:3/2;
+  perspective:1100px;
+  outline-offset:10px;
+}
+.env-back{
+  position:absolute;
+  inset:0;
+  background-color:var(--paper-3);
+  background-image:var(--grain);
+  background-size:220px 220px;
+  background-blend-mode:multiply;
+  box-shadow:
+    0 34px 60px -26px rgba(0,0,0,.9),
+    0 2px 0 rgba(255,255,255,.4) inset,
+    0 0 0 1px rgba(22,32,27,.22);
+}
+.env-letter{
+  position:absolute;
+  left:8%;
+  right:8%;
+  top:6%;
+  height:86%;
+  z-index:2;
+  padding:clamp(14px,2.8vh,26px) clamp(14px,3vw,26px);
+  background-color:var(--paper);
+  background-image:var(--grain);
+  background-size:200px 200px;
+  background-blend-mode:multiply;
+  border:1px solid rgba(22,32,27,.08);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:clamp(6px,1.2vh,10px);
+  transform:translateY(0) scale(.995);
+  transition:transform 1s cubic-bezier(.22,.86,.24,1),box-shadow .55s ease;
+}
+.env-letter.is-up{
+  transform:translateY(-88%) scale(1.035);
+  box-shadow:0 30px 54px -24px rgba(0,0,0,.8);
+}
+.letter-line{
+  margin:0;
+  font-size:clamp(15px,2.5vh,19px);
+  line-height:1.9;
+  letter-spacing:.05em;
+  color:var(--ink);
+}
+.letter-meta{
+  margin:clamp(4px,1vh,10px) 0 0;
+  font-size:clamp(10.5px,1.6vh,12.5px);
+  letter-spacing:.12em;
+  color:var(--ash);
+}
+.letter-sign{
+  margin:clamp(6px,1.4vh,14px) 0 0;
+  font-size:clamp(13px,2vh,16px);
+  letter-spacing:.26em;
+  color:var(--ink);
+}
+.env-pocket{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:64%;
+  z-index:3;
+  clip-path:polygon(0 0,50% 34%,100% 0,100% 100%,0 100%);
+  background-color:var(--paper-2);
+  background-image:var(--grain);
+  background-size:220px 220px;
+  background-blend-mode:multiply;
+  box-shadow:0 -10px 18px -14px rgba(22,32,27,.55) inset;
+}
+.env-flap{
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  height:66%;
+  z-index:4;
+  clip-path:polygon(0 0,100% 0,50% 100%);
+  background-color:var(--paper);
+  background-image:var(--grain);
+  background-size:220px 220px;
+  background-blend-mode:multiply;
+  transform-origin:50% 0;
+  transform-style:preserve-3d;
+  transition:transform .8s cubic-bezier(.24,.8,.2,1),visibility 0s linear .8s;
+  filter:drop-shadow(0 6px 10px rgba(22,32,27,.18));
+}
+.gate.is-open .env-flap{transform:rotateX(-176deg);visibility:hidden}
+.env-seal{
+  position:absolute;
+  left:50%;
+  top:63%;
+  z-index:5;
+  width:clamp(52px,9.6vh,74px);
+  transform:translate(-50%,-50%) rotate(-5deg);
+  transition:transform .38s cubic-bezier(.2,.8,.2,1),opacity .38s ease;
+  filter:drop-shadow(0 4px 5px rgba(120,30,20,.4));
+}
+.gate.is-open .env-seal{
+  transform:translate(-50%,-50%) scale(1.4) rotate(11deg);
+  opacity:0;
+}
+.env-seal svg{width:100%;height:auto;display:block}
+.env-addr{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:11%;
+  z-index:6;
+  text-align:center;
+  pointer-events:none;
+}
+.env-addr span{
+  display:block;
+  font-size:clamp(10.5px,1.6vh,12.5px);
+  letter-spacing:.2em;
+  color:rgba(47,61,52,.72);
+}
+.env-addr .addr-sub{
+  margin-top:5px;
+  font-size:clamp(9.5px,1.4vh,11px);
+  letter-spacing:.16em;
+  color:rgba(110,101,87,.82);
+}
+.gate-hint{
+  margin:0;
+  font-size:11.5px;
+  letter-spacing:.28em;
+  color:rgba(237,230,213,.5);
+  animation:hintPulse 2.6s ease-in-out infinite;
+  transition:opacity .3s ease;
+}
+.gate.is-open .gate-hint{opacity:0}
+@keyframes hintPulse{0%,100%{opacity:.34}50%{opacity:.85}}
+
+/* ===== 声音开关 ===== */
+.snd{
+  position:fixed;
+  left:clamp(8px,2vw,24px);
+  bottom:clamp(8px,2vh,20px);
+  z-index:24;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  min-height:44px;
+  padding:6px 8px;
+  border:0;
+  background:transparent;
+  font-family:var(--serif);
+  font-size:11.5px;
+  letter-spacing:.14em;
+  color:rgba(237,230,213,.52);
+  cursor:pointer;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .7s ease,color .2s ease;
+}
+.snd.is-show{opacity:1;pointer-events:auto}
+.snd:hover{color:#f2e8d2}
+.snd-ico{width:18px;height:18px;flex:0 0 auto;opacity:.85;transition:opacity .2s}
+.snd.is-off .snd-ico{opacity:.32}
+.snd-lab{white-space:nowrap}
+
+/* ===== 提示条 ===== */
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:clamp(14px,3vh,30px);
+  transform:translate(-50%,14px);
+  z-index:30;
+  background:rgba(16,24,20,.94);
+  color:#EDE6D5;
+  font-family:var(--serif);
+  font-size:13px;
+  letter-spacing:.1em;
+  padding:10px 18px;
+  border-radius:2px;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .24s ease,transform .24s ease;
+  box-shadow:0 10px 24px -14px rgba(0,0,0,.9);
+}
+.toast.is-on{opacity:1;transform:translate(-50%,0)}
+.hintbar{
+  position:fixed;
+  left:50%;
+  bottom:6px;
+  transform:translateX(-50%);
+  z-index:2;
+  font-size:11px;
+  letter-spacing:.16em;
+  color:rgba(237,230,213,.34);
+  white-space:nowrap;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .8s ease;
+}
+.hintbar.is-show{opacity:1}
+.sr-only{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;
+}
+:focus-visible{outline:2px solid var(--verm);outline-offset:2px}
+
+/* ===== 响应式 ===== */
+@media (min-width:721px){
+  .preface .preface-col{grid-column:2;grid-row:1}
+  .preface .preface-plate{grid-column:1;grid-row:1}
+}
+@media (max-width:960px){
+  .book{grid-template-columns:62px minmax(0,1fr)}
+  .cover{grid-template-columns:minmax(0,1fr) minmax(0,.82fr)}
+  .page{padding-left:clamp(16px,3vw,34px);padding-right:clamp(16px,3vw,34px)}
+  .books{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wnotes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  .book{
+    grid-template-columns:minmax(0,1fr);
+    grid-template-rows:44px minmax(0,1fr);
+    width:100%;
+    height:calc(100vh - 12px);
+    border-radius:0;
+    box-shadow:none;
+  }
+  .spine{
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:0 14px;
+  }
+  .spine::after{top:auto;bottom:0;right:0;left:0;width:auto;height:6px;background:linear-gradient(180deg,rgba(0,0,0,.4),rgba(0,0,0,0))}
+  .spine-mark{
+    writing-mode:horizontal-tb;
+    font-size:12px;
+    letter-spacing:.28em;
+    padding:0;
+  }
+  .tabs{
+    flex-direction:row;
+    gap:3px;
+    margin:0;
+    overflow:hidden;
+  }
+  .tab{width:auto;min-width:0;min-height:0;padding:0 1px;font-size:10px;pointer-events:none;background:transparent}
+  .tab::after{display:none}
+  .tab.is-cur::after{
+    display:block;width:100%;height:1px;margin:2px 0 0;background:var(--verm);
+  }
+  .page{padding:16px 18px 76px}
+  .page-head{font-size:10.5px;letter-spacing:.1em;padding-bottom:7px}
+  .page-head .ph-l{max-width:56%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .cover,
+  .preface,
+  .place,
+  .rsvp{grid-template-columns:minmax(0,1fr);height:auto;gap:18px}
+  .cover-text{gap:12px}
+  .cover-title{font-size:clamp(44px,13vw,64px);letter-spacing:.14em}
+  .cover-plate{order:-1}
+  .plate-frame{height:clamp(120px,26vh,180px)}
+  .seal{right:6px;bottom:-6px;width:58px}
+  .vtext{
+    writing-mode:horizontal-tb;
+    height:auto;
+    font-size:15px;
+    line-height:2;
+    color:var(--ink-soft);
+  }
+  .vtext p{margin:0 0 .8em}
+  .sig{position:static;margin-top:12px}
+  .preface-plate .plate-frame{height:clamp(110px,22vh,160px);flex:none}
+  .banner .plate-frame{height:clamp(120px,22vh,160px)}
+  .books{grid-template-columns:minmax(0,1fr)}
+  .place-side{gap:14px}
+  .wnotes{grid-template-columns:minmax(0,1fr);max-height:none}
+  .draw{gap:12px}
+  .slip{width:100%;min-height:clamp(130px,24vh,190px)}
+  .slip-text{font-size:clamp(16px,4.6vw,20px)}
+  .ticket{min-height:0}
+  .ticket-seal{width:56px;bottom:40px}
+  .hintbar{display:none}
+  .snd{left:6px;bottom:14px}
+  .snd-lab{display:none}
+  .nav{gap:8px;padding:8px 12px 12px}
+  .navbtn{font-size:12px;letter-spacing:.06em}
+  .pageno{font-size:13px}
+  .dogear{width:48px;height:48px;right:6px}
+  .page-head .ph-r{white-space:nowrap}
+}
+@media (max-height:620px) and (min-width:721px){
+  .page{padding-bottom:74px}
+  .nav{padding:8px 18px 12px}
+  .book{height:calc(100vh - 24px)}
+  .hintbar{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .leaf,.slip,.navbtn::after,.bk-more,.bk-plus,.note,.dogear,.toast,.gate,.env-letter,.env-flap,.env-seal,.hintbar,.snd,.leaf::after{transition-duration:.01s!important;animation-duration:.01s!important;animation-iteration-count:1!important}
+}
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <main class="book" id="book">
+    <aside class="spine">
+      <div class="spine-mark"><b>读书日</b> · 邀请函</div>
+      <nav class="tabs" aria-label="页签，可直接跳页">
+        <button class="tab is-cur" data-goto="1" aria-label="第1页 封面">01</button>
+        <button class="tab" data-goto="2" aria-label="第2页 序">02</button>
+        <button class="tab" data-goto="3" aria-label="第3页 把书读旧">03</button>
+        <button class="tab" data-goto="4" aria-label="第4页 时间地点">04</button>
+        <button class="tab" data-goto="5" aria-label="第5页 流程">05</button>
+        <button class="tab" data-goto="6" aria-label="第6页 书单">06</button>
+        <button class="tab" data-goto="7" aria-label="第7页 抽一页">07</button>
+        <button class="tab" data-goto="8" aria-label="第8页 留言">08</button>
+        <button class="tab" data-goto="9" aria-label="第9页 回执">09</button>
+      </nav>
+    </aside>
+
+    <div class="pages" id="pages">
+<!-- ===== 视图 01：封面 ===== -->
+      <section class="leaf is-on" aria-label="第一页，封面">
+        <div class="page">
+          <header class="page-head"><span class="ph-l">成都艺术职业大学 · 图书馆</span><span class="ph-r">封面 · 邀请函</span></header>
+          <div class="page-body">
+            <div class="cover">
+              <div class="cover-text">
+                <h1 class="cover-title">读书日</h1>
+                <p class="cover-sub">一封折进书页里的邀请</p>
+                <div class="cover-hair" aria-hidden="true"></div>
+                <dl class="cover-meta">
+                  <div><dt>时间</dt><dd>11 月 17 日（就是今天）· 下午三点</dd></div>
+                  <div><dt>地点</dt><dd>成都艺术职业大学 图书馆 · 二楼阅览厅</dd></div>
+                  <div><dt>组织人</dt><dd>铃铃铃玲</dd></div>
+                </dl>
+                <button class="btn-line" data-goto="2">翻开第一页</button>
+              </div>
+              <figure class="cover-plate">
+                <div class="plate-frame">
+                  <img src="assets/cover-window.jpg" alt="窗边堆着几本旧书和一只茶杯，午后的光落在翻开的书页上" width="1200" height="1500">
+                  <p class="plate-cap"><span>图版一</span><span>二楼靠窗的位置</span></p>
+                </div>
+                <div class="seal" aria-hidden="true">
+                  <svg viewBox="0 0 100 100" role="presentation">
+                    <rect x="7" y="7" width="86" height="86" rx="5" fill="none" stroke="#A83A2C" stroke-width="5"/>
+                    <text x="50" y="69" text-anchor="middle" font-size="43" font-weight="600" font-family="'Noto Serif SC',serif" fill="#A83A2C">邀</text>
+                  </svg>
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 视图 02：序 ===== -->
+      <section class="leaf is-off" aria-label="第二页，序">
+        <div class="page">
+          <header class="page-head"><span class="ph-l">成都艺术职业大学 · 图书馆</span><span class="ph-r">序</span></header>
+          <div class="page-body">
+            <div class="preface">
+              <div class="preface-col">
+                <div class="vtext">
+                  <p>有些话白天说不出口，就夹进书里。</p>
+                  <p>我们把这一天留给纸页：留给你读到一半舍不得合上的那一页，留给一支铅笔在页边写了一行、又擦掉的那一页。</p>
+                  <p>今天下午三点，图书馆二楼。带一本你读过的书来，我们交换彼此读过的时间。</p>
+                </div>
+                <div class="sig">
+                  <span class="sig-name">铃铃铃玲</span>
+                  <span class="sig-date">2026. 11. 17</span>
+                </div>
+              </div>
+              <figure class="preface-plate">
+                <div class="plate-frame">
+                  <img src="assets/lamp-night.jpg" alt="夜里的一盏台灯，摊开的书页被照成暖色" width="1600" height="1066">
+                  <p class="plate-cap"><span>图版二</span><span>夜里的台灯与书</span></p>
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 视图 03：把书读旧 ===== -->
+      <section class="leaf is-off" aria-label="第三页，把书读旧">
+        <div class="page">
+          <header class="page-head"><span class="ph-l">成都艺术职业大学 · 图书馆</span><span class="ph-r">把书读旧</span></header>
+          <div class="page-body">
+            <div class="aging">
+              <h1 class="h1">把书读旧</h1>
+              <p class="lead">这不是一场讲座，也不是分享会。我们只想把二楼那扇窗打开，让三十个人各自带着一本书坐下来读，读到想说话为止。</p>
+              <ul class="pacts">
+                <li><b>带来</b><span>一本你真正读完过的书。页边有字最好，有折角也行。</span></li>
+                <li><b>换走</b><span>用一个下午，换一本别人读过的书——你带走的是别人读过的时间。</span></li>
+                <li><b>留下</b><span>在书里写一句话，写给下一个翻开它的人。</span></li>
+              </ul>
+              <figure class="banner">
+                <div class="plate-frame">
+                  <img src="assets/shelf-light.jpg" alt="午后光柱从高窗斜射进图书馆的一排排书架" width="1800" height="1012">
+                  <p class="plate-cap"><span>图版三</span><span>二楼靠窗那一排书架</span></p>
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 视图 04：时间 · 地点 · 组织人 ===== -->
+      <section class="leaf is-off" aria-label="第四页，时间、地点与组织人">
+        <div class="page">
+          <header class="page-head"><span class="ph-l">成都艺术职业大学 · 图书馆</span><span class="ph-r">时间 · 地点 · 组织人</span></header>
+          <div class="page-body">
+            <div class="place">
+              <div>
+                <h1 class="h1">十一月十七日，下午三点</h1>
+                <dl class="card-list">
+                  <div><dt>时间</dt><dd>2026 年 11 月 17 日 · 星期二 · 15:00 — 17:30<strong>就是今天</strong></dd></div>
+                  <div><dt>地点</dt><dd>成都艺术职业大学 · 图书馆 二楼<small>阅览厅，出扶梯左转第二扇门</small></dd></div>
+                  <div><dt>组织人</dt><dd>铃铃铃玲</dd></div>
+                  <div><dt>名额</dt><dd>三十人，坐满为止<small>不必提前报名，来了就有位置，站着读也算</small></dd></div>
+                  <div><dt>带上</dt><dd>一本你读过的书、一支笔、你自己的水杯</dd></div>
+                </dl>
+                <p class="note-line">不需要门票。手机请调成静音；靠窗那一排留给最早到的人。</p>
+              </div>
+              <div class="place-side">
+                <div class="route">
+                  <p class="route-h">怎么走到二楼</p>
+                  <svg viewBox="0 0 300 96" role="img" aria-label="从一层大厅经扶手电梯到二层阅览厅的路线示意">
+                    <rect x="2" y="26" width="104" height="44" fill="rgba(22,32,27,.05)" stroke="rgba(22,32,27,.28)" stroke-width="1"></rect>
+                    <text x="54" y="45" text-anchor="middle" font-size="11" fill="#2F3D34" font-family="'Noto Serif SC',serif">一层 · 大厅</text>
+                    <text x="54" y="61" text-anchor="middle" font-size="9" fill="#6E6557" font-family="'Noto Serif SC',serif">正门进来直走到底</text>
+                    <path d="M110 48 H 176" stroke="#A83A2C" stroke-width="1.2" stroke-dasharray="4 4"></path>
+                    <path d="M170 44 L 177 48 L 170 52" fill="none" stroke="#A83A2C" stroke-width="1.2"></path>
+                    <text x="143" y="38" text-anchor="middle" font-size="9" fill="#A83A2C" font-family="'Noto Serif SC',serif">扶手电梯</text>
+                    <rect x="184" y="26" width="112" height="44" fill="rgba(58,90,75,.09)" stroke="rgba(58,90,75,.42)" stroke-width="1"></rect>
+                    <text x="240" y="45" text-anchor="middle" font-size="11" fill="#16201B" font-family="'Noto Serif SC',serif">二层 · 阅览厅</text>
+                    <text x="240" y="61" text-anchor="middle" font-size="9" fill="#6E6557" font-family="'Noto Serif SC',serif">出扶梯左转第二扇门</text>
+                  </svg>
+                  <p class="route-p">进正门 → 直走到头 → 右手扶梯上二楼 → 出扶梯<em>左转</em>，第二扇门。</p>
+                </div>
+                <figure class="banner">
+                  <div class="plate-frame">
+                    <img src="assets/hands-book.jpg" alt="一双手捧着一本摊开的书，逆光落在纸页边缘" width="1300" height="866">
+                    <p class="plate-cap"><span>图版四</span><span>读到一半，停一下</span></p>
+                  </div>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 视图 05：流程 ===== -->
+      <section class="leaf is-off" aria-label="第五页，流程">
+        <div class="page">
+          <header class="page-head"><span class="ph-l">成都艺术职业大学 · 图书馆</span><span class="ph-r">这两个半小时</span></header>
+          <div class="page-body">
+            <p class="lead" style="margin-bottom:16px">两个半小时，六件事。中间可以随时离席，去看窗外的树。</p>
+            <div class="tl">
+              <div class="tl-row">
+                <div class="tl-t">15:00</div>
+                <div class="tl-axis"><span class="tl-dot"></span></div>
+                <div class="tl-body"><p class="tl-h">入场 · 领一张借阅卡</p><p class="tl-p">写下名字，把带来的书放在中间的长桌上。</p></div>
+              </div>
+              <div class="tl-row">
+                <div class="tl-t">15:10</div>
+                <div class="tl-axis"><span class="tl-dot"></span></div>
+                <div class="tl-body"><p class="tl-h">静读 · 十五分钟不说话</p><p class="tl-p">三十个人一起翻页，<span class="em">声音会很好听</span>。</p></div>
+              </div>
+              <div class="tl-row">
+                <div class="tl-t">15:40</div>
+                <div class="tl-axis"><span class="tl-dot"></span></div>
+                <div class="tl-body"><p class="tl-h">换书 · 抽签交换</p><p class="tl-p">抽到谁的书，就读谁的时间。</p></div>
+              </div>
+              <div class="tl-row">
+                <div class="tl-t">16:20</div>
+                <div class="tl-axis"><span class="tl-dot"></span></div>
+                <div class="tl-body"><p class="tl-h">朗读 · 每人一段</p><p class="tl-p">读三分钟。不用读得好看，读得真就行。</p></div>
+              </div>
+              <div class="tl-row">
+                <div class="tl-t">17:00</div>
+                <div class="tl-axis"><span class="tl-dot"></span></div>
+                <div class="tl-body"><p class="tl-h">落笔 · 在页边写一句</p><p class="tl-p">写给下一个翻开这本书的人。</p></div>
+              </div>
+              <div class="tl-row">
+                <div class="tl-t">17:20</div>
+                <div class="tl-axis"><span class="tl-dot"></span></div>
+                <div class="tl-body"><p class="tl-h">合影 · 把灯留着</p><p class="tl-p">散场以后，二楼开到九点，不想走的可以继续读。</p></div>
+              </div>
+            </div>
+            <p class="note-line">全程不必发言，除非你想。抽到不想读的那一段，可以跳过去。</p>
+          </div>
+        </div>
+      </section>
+      <!-- ===== 视图 06：书单 ===== -->
+      <section class="leaf is-off" aria-label="第六页，书单">
+        <div class="page">
+          <header class="page-head"><span class="ph-l">成都艺术职业大学 · 图书馆</span><span class="ph-r">书单</span></header>
+          <div class="page-body">
+            <h1 class="h1">这次我们准备了六本</h1>
+            <p class="lead" style="margin-bottom:14px">提前读，也可以到现场再翻。六本都放在二楼靠窗那一排，贴着白色标签。点开一本，看看带它来的理由。</p>
+            <div class="books">
+              <button class="bk" aria-expanded="false">
+                <span class="bk-title">《我与地坛》</span>
+                <span class="bk-plus" aria-hidden="true">+</span>
+                <span class="bk-by">史铁生</span>
+                <span class="bk-hook">一个人和一座园子，慢慢把话说给彼此听。</span>
+                <span class="bk-more"><span><span class="bk-quote">他把轮椅停在树下，把话说给一座园子听。读完会安静很久——适合带来的人坐在窗边念一段。</span></span></span>
+              </button>
+              <button class="bk" aria-expanded="false">
+                <span class="bk-title">《人间草木》</span>
+                <span class="bk-plus" aria-hidden="true">+</span>
+                <span class="bk-by">汪曾祺</span>
+                <span class="bk-hook">写吃、写花、写人，写得像在聊天。</span>
+                <span class="bk-more"><span><span class="bk-quote">读它的时候最想泡一杯茶。句子短，味道长，适合读给别人听。</span></span></span>
+              </button>
+              <button class="bk" aria-expanded="false">
+                <span class="bk-title">《夜航西飞》</span>
+                <span class="bk-plus" aria-hidden="true">+</span>
+                <span class="bk-by">柏瑞尔·马卡姆</span>
+                <span class="bk-hook">一个女飞行员的非洲，句子像风。</span>
+                <span class="bk-more"><span><span class="bk-quote">短、冷、亮。它不解释，只让你看见云、草原和夜里的仪表盘。</span></span></span>
+              </button>
+              <button class="bk" aria-expanded="false">
+                <span class="bk-title">《山月记》</span>
+                <span class="bk-plus" aria-hidden="true">+</span>
+                <span class="bk-by">中岛敦</span>
+                <span class="bk-hook">「我怕自己不是美玉」，很短，很疼。</span>
+                <span class="bk-more"><span><span class="bk-quote">一篇就能读完，读完会停一下。适合带来给还在犹豫要不要开始的人。</span></span></span>
+              </button>
+              <button class="bk" aria-expanded="false">
+                <span class="bk-title">《观看之道》</span>
+                <span class="bk-plus" aria-hidden="true">+</span>
+                <span class="bk-by">约翰·伯格</span>
+                <span class="bk-hook">教你怎么看一张画，也怎么看广告。</span>
+                <span class="bk-more"><span><span class="bk-quote">图多字少，一下午能翻完。翻完再看手机里的广告，会有点不一样。</span></span></span>
+              </button>
+              <button class="bk" aria-expanded="false">
+                <span class="bk-title">《活着》</span>
+                <span class="bk-plus" aria-hidden="true">+</span>
+                <span class="bk-by">余华</span>
+                <span class="bk-hook">读完会想给家里打个电话。</span>
+                <span class="bk-more"><span><span class="bk-quote">不用多介绍。如果它正好是你带来的那本，请在第末页写一句给下一个人的话。</span></span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 视图 07：抽一页 ===== -->
+      <section class="leaf is-off" aria-label="第七页，抽一页">
+        <div class="page">
+          <header class="page-head"><span class="ph-l">成都艺术职业大学 · 图书馆</span><span class="ph-r">抽一页</span></header>
+          <div class="page-body">
+            <div class="draw">
+              <div class="draw-head">
+                <h1 class="h1">翻到哪一页</h1>
+                <p class="lead">今天你和哪句话遇上，交给纸来决定。抽到喜欢的，可以抄进你带来的那本书里。</p>
+              </div>
+              <div class="draw-slot">
+                <div class="slip" id="slip">
+                  <span class="slip-no" id="slipNo">还没抽</span>
+                  <p class="slip-text" id="slipText">还没有抽。</p>
+                  <p class="slip-idle" id="slipIdle">按下面的按钮，随手翻一页。</p>
+                </div>
+              </div>
+              <div class="draw-foot">
+                <button class="btn-line" id="drawBtn">抽一页</button>
+                <p class="draw-note" id="drawNote" aria-live="polite">已经抽了 0 次</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 视图 08：留下一句 ===== -->
+      <section class="leaf is-off" aria-label="第八页，留言墙">
+        <div class="page">
+          <header class="page-head"><span class="ph-l">成都艺术职业大学 · 图书馆</span><span class="ph-r">留下一句</span></header>
+          <div class="page-body">
+            <div class="wall">
+              <h1 class="h1">留下一句</h1>
+              <p class="lead">写下今天想说的话，它会留在这一页上。四十个字以内，署不署名都行。</p>
+              <div class="wform">
+                <label class="sr-only" for="winput">留言内容</label>
+                <input class="winput" id="winput" type="text" maxlength="40" placeholder="比如：带了《我与地坛》，谁要？" autocomplete="off">
+                <button class="wbtn" id="wadd">贴上</button>
+              </div>
+              <p class="wcount" id="wcount">墙上已经有 3 句</p>
+              <div class="wnotes" id="wnotes"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 视图 09：回执 ===== -->
+      <section class="leaf is-off" aria-label="第九页，回执">
+        <div class="page">
+          <header class="page-head"><span class="ph-l">成都艺术职业大学 · 图书馆</span><span class="ph-r">回执</span></header>
+          <div class="page-body">
+            <div class="rsvp">
+              <div class="rsvp-form">
+                <h1 class="h1">你会来吗</h1>
+                <p class="lead">写个名字就行。不写也可以来——二楼的门不锁。</p>
+                <div class="field">
+                  <label for="rname">你的名字</label>
+                  <input id="rname" type="text" maxlength="12" placeholder="写在这里" autocomplete="off">
+                </div>
+                <button class="btn-line" id="rsvpBtn">我会来</button>
+                <div class="ticket-actions">
+                  <button class="mini-btn" id="copyBtn" disabled>复制凭证</button>
+                  <button class="mini-btn" data-goto="1">回到封面</button>
+                </div>
+                <p class="farewell">图书馆二楼，三点见。<br><span>组织人 · 铃铃铃玲</span>　2026.11.17</p>
+              </div>
+              <div class="ticket" id="ticket">
+                <div class="ticket-h"><b>读书日 · 入场凭证</b><span id="ticketState">待填写</span></div>
+                <dl class="ticket-rows">
+                  <div><dt>姓名</dt><dd class="is-empty" id="tName">——</dd></div>
+                  <div><dt>时间</dt><dd>2026.11.17 · 15:00</dd></div>
+                  <div><dt>地点</dt><dd>图书馆二楼 · 阅览厅</dd></div>
+                  <div><dt>座位</dt><dd class="is-empty" id="tSeat">——</dd></div>
+                </dl>
+                <div class="ticket-code">
+                  <div class="barcode" aria-hidden="true"></div>
+                  <span class="ticket-no" id="tNo">No. 2026-000</span>
+                </div>
+                <div class="ticket-seal is-ghost" id="tSeal" aria-hidden="true">
+                  <svg viewBox="0 0 100 100" role="presentation">
+                    <rect x="7" y="7" width="86" height="86" rx="5" fill="none" stroke="#A83A2C" stroke-width="5"></rect>
+                    <text x="50" y="69" text-anchor="middle" font-size="43" font-weight="600" font-family="'Noto Serif SC',serif" fill="#A83A2C">已</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="nav" aria-label="翻页">
+        <button class="navbtn" id="prev" aria-label="上一页">上一页</button>
+        <span class="pageno"><span id="pno">01</span><em>/ 09</em></span>
+        <button class="navbtn" id="next" aria-label="下一页">下一页</button>
+      </nav>
+    </div>
+  </main>
+</div>
+
+<!-- ===== 开信 ===== -->
+<div class="gate" id="gate">
+  <div class="gate-inner">
+    <div class="env" id="env" role="button" tabindex="0" aria-label="点开信封，取出邀请函">
+      <div class="env-back"></div>
+      <div class="env-letter" id="envLetter">
+        <p class="letter-line">有些话，白天说不出口，<br>就夹进书里。</p>
+        <p class="letter-meta">十一月十七日 · 下午三点 · 图书馆二楼</p>
+        <p class="letter-sign">铃铃铃玲</p>
+      </div>
+      <div class="env-pocket"></div>
+      <div class="env-flap"></div>
+      <div class="env-addr">
+        <span>致 · 正在读这句话的你</span>
+        <span class="addr-sub">成都艺术职业大学 · 图书馆二楼</span>
+      </div>
+      <div class="env-seal" aria-hidden="true">
+        <svg viewBox="0 0 100 100" role="presentation">
+          <circle cx="50" cy="50" r="45" fill="#A83A2C"></circle>
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#7E281E" stroke-width="5" opacity=".45"></circle>
+          <circle cx="50" cy="50" r="35" fill="none" stroke="#F3E9D8" stroke-width="1.6" opacity=".55"></circle>
+          <text x="50" y="65" text-anchor="middle" font-size="35" font-weight="600" font-family="'Noto Serif SC',serif" fill="#F3E9D8">邀</text>
+        </svg>
+      </div>
+    </div>
+    <p class="gate-hint">轻点信封</p>
+  </div>
+</div>
+
+<button class="snd" id="snd" aria-pressed="false" aria-label="背景音乐开关">
+  <svg class="snd-ico" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4 9.5h3.8L13 5.2v13.6L7.8 14.5H4z" fill="currentColor" opacity=".85"></path>
+    <path d="M16 8.6c1.5 1 1.5 5.8 0 6.8" fill="none" stroke="currentColor" stroke-width="1.4"></path>
+    <path d="M18.8 6.4c2.4 1.6 2.4 9.2 0 10.8" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".65"></path>
+  </svg>
+  <span class="snd-lab" id="sndLab">声音 关</span>
+</button>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  'use strict';
+
+  var leaves = Array.prototype.slice.call(document.querySelectorAll('.leaf'));
+  var total = leaves.length;
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  var prevBtn = document.getElementById('prev');
+  var nextBtn = document.getElementById('next');
+  var pnoEl = document.getElementById('pno');
+  var toastEl = document.getElementById('toast');
+  var reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var cur = 1;
+  var busy = false;
+
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+  function pad3(n){ return ('00' + n).slice(-3); }
+
+  function paint(){
+    pnoEl.textContent = pad(cur);
+    tabs.forEach(function(t){
+      var n = parseInt(t.dataset.goto, 10);
+      var on = (n === cur);
+      t.classList.toggle('is-cur', on);
+      t.setAttribute('aria-current', on ? 'page' : 'false');
+    });
+    prevBtn.disabled = (cur === 1);
+    nextBtn.disabled = (cur === total);
+  }
+
+  function goTo(n){
+    if (busy || n === cur || n < 1 || n > total) return;
+    var dir = n > cur ? 1 : -1;
+    var oldEl = leaves[cur - 1];
+    var newEl = leaves[n - 1];
+    if (!oldEl || !newEl) return;
+    busy = true;
+
+    var body = newEl.querySelector('.page-body');
+    if (body) body.scrollTop = 0;
+
+    oldEl.classList.remove('is-on');
+    oldEl.classList.add(dir > 0 ? 'is-turn-next' : 'is-turn-prev');
+    newEl.className = 'leaf is-pre';
+
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){
+        newEl.classList.remove('is-pre');
+        newEl.classList.add('is-on');
+        newEl.classList.add('is-shade');
+      });
+    });
+
+    paperSound();
+
+    cur = n;
+    paint();
+
+    var dur = reduceMQ.matches ? 30 : 880;
+    window.setTimeout(function(){
+      oldEl.className = 'leaf is-off';
+      newEl.classList.remove('is-shade');
+      busy = false;
+    }, dur);
+  }
+
+  document.addEventListener('click', function(e){
+    var t = e.target.closest('[data-goto]');
+    if (t){
+      var n = parseInt(t.dataset.goto, 10);
+      if (!isNaN(n)) goTo(n);
+    }
+  });
+
+  prevBtn.addEventListener('click', function(){ goTo(cur - 1); });
+  nextBtn.addEventListener('click', function(){ goTo(cur + 1); });
+
+  window.addEventListener('keydown', function(e){
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'textarea' || e.target.isContentEditable) return;
+    var g = document.getElementById('gate');
+    if (g && !g.classList.contains('is-gone')) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === 'PageDown'){
+      e.preventDefault(); goTo(cur + 1);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp'){
+      e.preventDefault(); goTo(cur - 1);
+    } else if (e.key === 'Home'){
+      e.preventDefault(); goTo(1);
+    } else if (e.key === 'End'){
+      e.preventDefault(); goTo(total);
+    }
+  });
+
+  var pagesEl = document.getElementById('pages');
+  var sx = 0, sy = 0, tracking = false;
+  pagesEl.addEventListener('pointerdown', function(e){
+    if (e.target.closest('input, textarea, button, select, a')) return;
+    tracking = true; sx = e.clientX; sy = e.clientY;
+  });
+  pagesEl.addEventListener('pointerup', function(e){
+    if (!tracking) return;
+    tracking = false;
+    var dx = e.clientX - sx, dy = e.clientY - sy;
+    if (Math.abs(dx) > 64 && Math.abs(dx) > Math.abs(dy) * 1.5){
+      goTo(dx < 0 ? cur + 1 : cur - 1);
+    }
+  });
+  pagesEl.addEventListener('pointercancel', function(){ tracking = false; });
+
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-on');
+    if (toastTimer) window.clearTimeout(toastTimer);
+    toastTimer = window.setTimeout(function(){ toastEl.classList.remove('is-on'); }, 2400);
+  }
+
+  /* 书单：点开一本 */
+  Array.prototype.forEach.call(document.querySelectorAll('.bk'), function(bk){
+    bk.addEventListener('click', function(){
+      var open = bk.classList.toggle('is-open');
+      bk.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+
+  /* 抽一页 */
+  var LINES = [
+    '书里最安静的地方，往往写着最响的话。',
+    '读到一半合上，也是一种读完。',
+    '一本旧书里的空白，比正文更值钱。',
+    '翻页的声音，是这栋楼里最好听的动静。',
+    '你不是在读书，你是在把别人的时间读成自己的。',
+    '有些句子要等很多年才读得懂，它一直在那儿等。',
+    '把书借给别人，等于把一段日子借出去。',
+    '页边写得歪歪扭扭的那几行，才是真的读过。',
+    '读到想打电话给谁的时候，就停下来。',
+    '一本书最好的结局，是被读旧。'
+  ];
+  var slip = document.getElementById('slip');
+  var slipNo = document.getElementById('slipNo');
+  var slipText = document.getElementById('slipText');
+  var slipIdle = document.getElementById('slipIdle');
+  var drawBtn = document.getElementById('drawBtn');
+  var drawNote = document.getElementById('drawNote');
+  var draws = 0, lastLine = -1, flipping = false;
+
+  drawBtn.addEventListener('click', function(){
+    if (flipping) return;
+    flipping = true;
+    slip.classList.add('is-flip');
+    window.setTimeout(function(){
+      var i = Math.floor(Math.random() * LINES.length);
+      if (i === lastLine) i = (i + 1) % LINES.length;
+      lastLine = i;
+      slipText.textContent = LINES[i];
+      slipNo.textContent = '第 ' + pad(i + 1) + ' 句';
+      slipIdle.textContent = '再抽一次，换一句。';
+      slip.classList.remove('is-flip');
+      flipping = false;
+      draws = draws + 1;
+      drawNote.textContent = draws === 1 ? '抽了 1 次' : ('已经抽了 ' + draws + ' 次');
+    }, reduceMQ.matches ? 20 : 430);
+  });
+
+  /* 留言墙 */
+  var SEED = [
+    { t: '带了《我与地坛》，谁要？', by: '匿名' },
+    { t: '第一次上二楼，窗边那个位置真好。', by: '二楼常客' },
+    { t: '读到那句，想起我妈。', by: '匿名' }
+  ];
+  var notes = SEED.map(function(n){
+    return { t: n.t, by: n.by, rot: (Math.random() * 4.4 - 2.2) };
+  });
+  var wnotes = document.getElementById('wnotes');
+  var wcount = document.getElementById('wcount');
+  var winput = document.getElementById('winput');
+  var wadd = document.getElementById('wadd');
+
+  function renderNotes(){
+    wnotes.innerHTML = '';
+    notes.slice().reverse().forEach(function(n, idx){
+      var el = document.createElement('div');
+      el.className = 'note';
+      el.style.transform = 'rotate(' + n.rot.toFixed(1) + 'deg)';
+      var tx = document.createElement('span');
+      tx.className = 'note-t';
+      tx.textContent = n.t;
+      var by = document.createElement('span');
+      by.className = 'note-by';
+      by.textContent = (idx === 0 && n.isNew) ? '刚刚' : n.by;
+      if (idx === 0 && n.isNew) by.style.color = '#A83A2C';
+      el.appendChild(tx);
+      el.appendChild(by);
+      wnotes.appendChild(el);
+    });
+    wcount.textContent = '墙上已经有 ' + notes.length + ' 句';
+  }
+
+  function addNote(){
+    var v = (winput.value || '').trim();
+    if (!v){ toast('先写一句吧'); winput.focus(); return; }
+    notes.forEach(function(n){ n.isNew = false; });
+    notes.push({ t: v.slice(0, 40), by: '匿名', rot: (Math.random() * 4.4 - 2.2), isNew: true });
+    winput.value = '';
+    renderNotes();
+    toast('已经贴上');
+  }
+  wadd.addEventListener('click', addNote);
+  winput.addEventListener('keydown', function(e){
+    if (e.key === 'Enter'){ e.preventDefault(); addNote(); }
+  });
+  renderNotes();
+
+  /* 回执 */
+  var rname = document.getElementById('rname');
+  var rsvpBtn = document.getElementById('rsvpBtn');
+  var copyBtn = document.getElementById('copyBtn');
+  var tName = document.getElementById('tName');
+  var tSeat = document.getElementById('tSeat');
+  var tNo = document.getElementById('tNo');
+  var tSeal = document.getElementById('tSeal');
+  var ticketState = document.getElementById('ticketState');
+  var ticketData = null;
+
+  function makeSeat(){
+    return 'B-' + pad(1 + Math.floor(Math.random() * 30));
+  }
+
+  rsvpBtn.addEventListener('click', function(){
+    var name = (rname.value || '').trim();
+    if (!name){ toast('先写上你的名字'); rname.focus(); return; }
+    var seat = makeSeat();
+    var no = pad3(1 + Math.floor(Math.random() * 120));
+    ticketData = { name: name.slice(0, 12), seat: seat, no: no };
+    tName.textContent = ticketData.name;
+    tName.classList.remove('is-empty');
+    tSeat.textContent = seat;
+    tSeat.classList.remove('is-empty');
+    tNo.textContent = 'No. 2026-' + no;
+    ticketState.textContent = '已确认';
+    tSeal.classList.remove('is-ghost');
+    copyBtn.disabled = false;
+    toast('凭证写好了，截图或复制都行');
+  });
+
+  function copyText(text){
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){ toast('已复制到剪贴板'); })
+        .catch(function(){ legacyCopy(text); });
+    } else {
+      legacyCopy(text);
+    }
+  }
+  function legacyCopy(text){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.top = '-100px';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
+    document.body.removeChild(ta);
+    toast(ok ? '已复制到剪贴板' : '复制没成功，手动截个图吧');
+  }
+
+  copyBtn.addEventListener('click', function(){
+    if (!ticketData) return;
+    copyText('读书日邀请函｜2026年11月17日 15:00｜成都艺术职业大学 图书馆二楼 阅览厅｜'
+      + ticketData.name + '　座位 ' + ticketData.seat + '　编号 No.2026-' + ticketData.no
+      + '｜组织人：铃铃铃玲');
+  });
+
+  /* ===== 声音：浏览器内合成的钢琴环境音 ===== */
+  var AC = window.AudioContext || window.webkitAudioContext;
+  var actx = null, bus = null, musicBus = null, sfxBus = null, noiseBuf = null;
+  var soundOn = false, ambientTimer = null, ambientStep = 0;
+  var sndBtn = document.getElementById('snd');
+  var sndLab = document.getElementById('sndLab');
+  var isNarrow = window.matchMedia('(max-width: 720px)').matches;
+
+  function buildAudio(){
+    if (actx || !AC) return;
+    actx = new AC();
+    bus = actx.createGain();
+    bus.gain.value = 0;
+    bus.connect(actx.destination);
+    musicBus = actx.createGain();
+    musicBus.gain.value = 0.32;
+    musicBus.connect(bus);
+    sfxBus = actx.createGain();
+    sfxBus.gain.value = 0.5;
+    sfxBus.connect(bus);
+    var len = Math.floor(actx.sampleRate * 0.5);
+    noiseBuf = actx.createBuffer(1, len, actx.sampleRate);
+    var d = noiseBuf.getChannelData(0);
+    for (var i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * 0.6;
+  }
+
+  function playNote(freq, at, peak, dur){
+    var osc = actx.createOscillator();
+    var lp = actx.createBiquadFilter();
+    var g = actx.createGain();
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(freq, at);
+    lp.type = 'lowpass';
+    lp.frequency.setValueAtTime(1500, at);
+    lp.Q.value = 0.7;
+    g.gain.setValueAtTime(0.0001, at);
+    g.gain.exponentialRampToValueAtTime(peak, at + 0.3);
+    g.gain.exponentialRampToValueAtTime(0.0001, at + dur);
+    osc.connect(lp);
+    lp.connect(g);
+    g.connect(musicBus);
+    osc.start(at);
+    osc.stop(at + dur + 0.12);
+  }
+
+  var PHRASE = [
+    [220.00], [261.63, 196.00], [293.66], [164.81, 220.00],
+    [261.63], [196.00, 146.83], [220.00, 164.81], [329.63]
+  ];
+
+  function ambientTick(){
+    if (!actx || !soundOn || actx.state !== 'running') return;
+    var notes = PHRASE[ambientStep % PHRASE.length];
+    var t = actx.currentTime + 0.08;
+    playNote(notes[0], t, 0.24, 3.6);
+    if (notes[1]) playNote(notes[1], t + 0.26, 0.13, 3.2);
+    ambientStep = ambientStep + 1;
+  }
+
+  function startMusic(){
+    if (!actx || ambientTimer) return;
+    ambientTick();
+    ambientTimer = window.setInterval(ambientTick, 2700);
+  }
+
+  function stopMusic(){
+    if (ambientTimer){ window.clearInterval(ambientTimer); ambientTimer = null; }
+  }
+
+  function paperSound(){
+    if (!actx || !soundOn || !noiseBuf || actx.state !== 'running') return;
+    var t = actx.currentTime;
+    var src = actx.createBufferSource();
+    var bp = actx.createBiquadFilter();
+    var g = actx.createGain();
+    src.buffer = noiseBuf;
+    bp.type = 'bandpass';
+    bp.frequency.setValueAtTime(2500, t);
+    bp.Q.value = 0.55;
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(0.4, t + 0.05);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + 0.42);
+    src.connect(bp);
+    bp.connect(g);
+    g.connect(sfxBus);
+    src.start(t);
+    src.stop(t + 0.45);
+  }
+
+  function setSound(on){
+    if (on){
+      buildAudio();
+      if (!actx) return;
+      if (actx.state === 'suspended'){ actx.resume(); }
+      sndBtn.classList.add('is-show');
+      var now = actx.currentTime;
+      bus.gain.cancelScheduledValues(now);
+      bus.gain.setValueAtTime(bus.gain.value, now);
+      bus.gain.linearRampToValueAtTime(1, now + 1.2);
+      startMusic();
+    } else if (actx){
+      var t2 = actx.currentTime;
+      bus.gain.cancelScheduledValues(t2);
+      bus.gain.setValueAtTime(bus.gain.value, t2);
+      bus.gain.linearRampToValueAtTime(0, t2 + 0.45);
+      stopMusic();
+    }
+    soundOn = on;
+    sndBtn.classList.toggle('is-off', !on);
+    sndBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    if (sndLab) sndLab.textContent = on ? '声音 开' : '声音 关';
+  }
+
+  sndBtn.addEventListener('click', function(){ setSound(!soundOn); });
+
+  /* ===== 开信封 ===== */
+  var gate = document.getElementById('gate');
+  var env = document.getElementById('env');
+  var envLetter = document.getElementById('envLetter');
+  var hintEl = document.querySelector('.hintbar');
+  var gateOpened = false;
+
+  function openGate(){
+    if (gateOpened) return;
+    gateOpened = true;
+    gate.classList.add('is-open');
+    if (!isNarrow){ setSound(true); }
+    else { sndBtn.classList.add('is-show'); }
+    window.setTimeout(function(){ envLetter.classList.add('is-up'); }, 760);
+    window.setTimeout(function(){ gate.classList.add('is-out'); }, 1740);
+    window.setTimeout(function(){
+      gate.classList.add('is-gone');
+      if (hintEl) hintEl.classList.add('is-show');
+    }, 2560);
+  }
+
+  gate.addEventListener('click', openGate);
+  env.addEventListener('keydown', function(e){
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar'){
+      e.preventDefault();
+      openGate();
+    }
+  });
+
+  paint();
+})();
+</script>
+
+<div class="hintbar">← → 键翻页 · 也可以横向滑动</div>
+</body>
+</html>
